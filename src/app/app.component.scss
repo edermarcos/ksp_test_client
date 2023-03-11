@@ -1,0 +1,12 @@
+.ac-wrap {
+  display: flex;
+  gap: 1rem;
+  background-color: #F2F3F9;
+  padding: 1rem;
+  min-height: 100vh;
+
+  .ac-right {
+    flex-grow: 1;
+  }
+}
+

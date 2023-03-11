@@ -1,0 +1,45 @@
+.ah-wrap {
+  background-color: white;
+  padding: 1rem;
+  border-radius: .5rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .ah-user {
+    display: flex;
+
+    .user-photo {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: .5rem;
+    }
+
+    .user-info {
+      h3, p {
+        margin: 0;
+      }
+
+      h3 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: .8rem;
+        color: #999;
+      }
+    }
+  }
+
+  .ah-search {
+    flex-grow: 1;
+  }
+
+  .ah-icons {
+    display: flex;
+    gap: .5rem;
+  }
+}

@@ -1,0 +1,51 @@
+$bgColor: #fff;
+
+.as-wrap {
+  width: 256px;
+  max-width: 256px;
+  background-color: $bgColor;
+  border-radius: .5rem;
+  height: 100%;
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+
+  .as-logo {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    img {
+      height: 50px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .as-menu {
+    flex-grow: 1;
+  }
+
+  .as-menu-item {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: .75rem 1rem;
+    margin: .5rem 0;
+    border-radius: .5rem;
+    font-size: 14px;
+    color: darken($bgColor, 60);
+
+    &:hover {
+      background-color: darken($bgColor, 4);
+      cursor: pointer;
+      color: black;
+    }
+
+    i {
+      margin-right: .75rem;
+    }
+  }
+}
