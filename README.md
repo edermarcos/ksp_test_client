@@ -1,27 +1,38 @@
-# EderCrud
+# KSP Client
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+Proyecto sencillo que incluye un crud a un API realizado en Nest.js
 
-## Development server
+![](https://i.imgur.com/VQiKdpU.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### About the Project
+Este proyecto esta creado con Node.js v18.14.0 y Angular CLI version 15.2.1.
 
-## Code scaffolding
+### Tech Stack
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [Angular 15](https://angular.io/cli)
+- [Bootstrap 5](https://getbootstrap.com/)
+- [Font Awesome 5](https://fontawesome.com/)
 
-## Build
+### Prerequisites
+Se necesita tener instalado Angular CLI para poder correr el proyecto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Installation
 
-## Running unit tests
+1. Clonar el repositorio
+   ```sh
+   git clone https://github.com/edermarcos/ksp_test_client.git
+   ```
+2. Instalar las dependencias
+   ```sh
+   yarn install
+   ```
+3. Correr el proyecto
+   ```sh
+   ng s -o
+   ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Running end-to-end tests
+## Contact
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Eder Marcos - eder.marcos.lara@gmail.com
