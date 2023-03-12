@@ -6,10 +6,10 @@ import { LoginModule } from './pages/login/login.module';
 import { SignupModule } from './pages/signup/signup.module';
 
 const routes: Routes = [
-  {
-    path: 'dashboard',
-    loadChildren: () => DashboardModule
-  },
+  // {
+  //   path: 'dashboard',
+  //   loadChildren: () => DashboardModule
+  // },
   {
     path: 'employees',
     loadChildren: () => EmployeesModule
@@ -22,7 +22,7 @@ const routes: Routes = [
     path: 'signup',
     loadChildren: () => SignupModule
   },
-  { path: '**', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '**', redirectTo: '/employees', pathMatch: 'full' },
 ];
 
 @NgModule({

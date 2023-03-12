@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class AppButtonIconComponent {
   @Input() icon: string = 'fa-solid fa-house';
+  @Input() cssClass: string = '';
 }

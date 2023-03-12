@@ -1,0 +1,17 @@
+.ac-wrap {
+  border-radius: .5rem;
+  padding: 1rem;
+  background-color: white;
+
+  .ac-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    p {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+    }
+  }
+}

@@ -1,1 +1,83 @@
-<p>employees works!</p>
+<app-card cardTitle="Employees List" icon="fas fa-plus" (iconClick)="openModal()">
+  <table class="table" cardContent>
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">Position</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Status</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody class="">
+      <tr *ngFor="let employee of entities">
+        <th scope="row">{{ employee.id }}</th>
+        <td>{{ employee.fullName }}</td>
+        <td>{{ employee.position }}</td>
+        <td>{{ employee.salary | currency }}</td>
+        <td>{{ employee.status || '-' }}</td>
+        <td class="crud-actions">
+          <app-button-icon icon="far fa-edit" (click)="openModal(employee.id)"></app-button-icon>
+          <app-button-icon icon="far fa-trash-alt" cssClass="text-danger" (click)="deleteEmployee(employee.id)"></app-button-icon>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</app-card>
+
+
+<!-- Modal -->
+<div class="modal fade" id="employeeModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h1 class="modal-title fs-5">
+          <ng-container *ngIf="isEditing">Edit this employee</ng-container>
+          <ng-container *ngIf="!isEditing">Create a new employee</ng-container>
+        </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Content Start -->
+        <form [formGroup]="form">
+          <div class="row mb-3">
+            <div class="col">
+              <label for="fullName" class="form-label">FullName:</label>
+              <input type="text" class="form-control" id="fullName" formControlName="fullName">
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col">
+              <label for="position" class="form-label">Position:</label>
+              <input type="text" class="form-control" id="position" formControlName="position">
+            </div>
+
+            <div class="col">
+              <label for="salary" class="form-label">Salary:</label>
+              <input type="text" class="form-control" id="salary" formControlName="salary">
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col">
+              <label for="status" class="form-label">Status:</label>
+              <select class="form-select" aria-label="Default select example" id="status" formControlName="status">
+                <option selected>Seleccione un status</option>
+                <option value="active">Active</option>
+                <option value="pending">Pending</option>
+                <option value="inactive">Inactive</option>
+              </select>
+            </div>
+          </div>
+        </form>
+        <!-- Content End -->
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-outline-primary em-button" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary em-button" (click)="submit()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>

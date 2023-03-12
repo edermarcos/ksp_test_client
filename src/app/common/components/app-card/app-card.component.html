@@ -1,0 +1,9 @@
+<div class="ac-wrap">
+  <div class="ac-title">
+    <p>{{ cardTitle }}</p>
+
+    <app-button-icon (click)="iconClick.emit()" [icon]="icon"></app-button-icon>
+  </div>
+
+  <ng-content [select]="cardContent"></ng-content>
+</div>
