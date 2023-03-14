@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
 import { throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 export class DataService {
 
@@ -60,7 +61,7 @@ export class DataService {
   }
 
   private getUrl() {
-    return this.args.endPoint ? `http://localhost:3000/${ this.args.endPoint }/` : '';
+    return this.args.endPoint ? `${environment.api}/${ this.args.endPoint }/` : '';
   }
 
   private handleError(error: string) {

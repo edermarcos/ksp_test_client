@@ -12,6 +12,6 @@ $bgColor: #F6F6F6;
 
   &:hover {
     cursor: pointer;
-    background-color: darken($bgColor, 2);
+    background-color: darken($bgColor, 5);
   }
 }

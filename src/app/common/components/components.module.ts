@@ -7,6 +7,7 @@ import { AppSidebarComponent } from './app-sidebar/app-sidebar.component';
 import { AppButtonIconComponent } from './app-button-icon/app-button-icon.component';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { AppCardComponent } from './app-card/app-card.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AppCardComponent } from './app-card/app-card.component';
     CommonModule,
     RouterLink,
     RouterLinkActive,
+    FormsModule,
   ],
   exports: [
     AppTableComponent,

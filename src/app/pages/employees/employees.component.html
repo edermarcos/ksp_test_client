@@ -2,7 +2,6 @@
   <table class="table" cardContent>
     <thead>
       <tr>
-        <th scope="col">ID</th>
         <th scope="col">Full Name</th>
         <th scope="col">Position</th>
         <th scope="col">Salary</th>
@@ -12,7 +11,6 @@
     </thead>
     <tbody class="">
       <tr *ngFor="let employee of entities">
-        <th scope="row">{{ employee.id }}</th>
         <td>{{ employee.fullName }}</td>
         <td>{{ employee.position }}</td>
         <td>{{ employee.salary | currency }}</td>

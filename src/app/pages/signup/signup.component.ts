@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent {
+  form: FormGroup;
 
+  constructor(private readonly formBuilder: FormBuilder) {
+    this.form = formBuilder.group({
+      fullName: ['', Validators.required],
+      email: ['', Validators.required],
+      password: ['', Validators.required]
+    })
+  }
 }

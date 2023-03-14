@@ -9,7 +9,10 @@
   </section>
 
   <section class="ah-search">
-    <input type="text" class="form-control rounded-pill" placeholder="Search...">
+    <input type="text" class="form-control rounded-pill"
+           placeholder="Search..."
+           [(ngModel)]="queryParam"
+           (ngModelChange)="onSearch()">
   </section>
 
   <section class="ah-icons">
